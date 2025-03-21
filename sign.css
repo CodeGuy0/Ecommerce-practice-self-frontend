@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.login-section {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('login-img/71c59171434c02e50fb295d0f13245bb.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+
+.login-vector {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.login-vector img {
+    width: 100%;
+}
+
+.section-first{
+    padding-right: calc(var(--bs-gutter-x)* .0) !important;
+    padding-left: calc(var(--bs-gutter-x)* .0) !important;
+}
+
+
+form {
+    background-color: #173334;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1111;
+    opacity: 0.95;
+    position: relative;
+    bottom: auto;
+    
+}
+
+
+h1 {
+    font-weight: bold;
+    color: #f8b82f;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+.registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.registerbtn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
+a {
+    color: dodgerblue;
+}
+
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    form {
+        /* position: absolute; */
+        /* bottom: 30px;  */
+        left: 50%;
+        /* transform: translateX(-50%); */
+        width: 400px;
+    }
+}

@@ -1,0 +1,59 @@
+@media (max-width: 768px) {
+    .card-wrapper {
+        padding: 10px;
+    }
+
+    .card-list .card-item img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-wrapper {
+        padding: 5px;
+    }
+
+    .card-list .card-item img {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+    }
+    .nav .nav-link {
+      padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-form {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .value-button,
+    input#number {
+      width: 100%;
+      max-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-card {
+      width: 100%;
+      max-width: 300px; 
+      padding: 10px;
+    }
+  
+    .item-text {
+      font-size: 16px;
+    }
+  
+    .list-group-item img {
+      width: 20px;
+      height: 20px;
+    }
+}
