@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="order-cart.css">
     <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -13,67 +13,175 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <div class="container-fluid section-first" style="position: fixed; z-index: 2; top: 0; left: 0;">
-            <div class="nav-bar" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px 10px;">
-                <div class="nav-bar-second" style="padding-left: 6%;">
-                    <a class="navbar-brand" href="index.html" style="font-weight: bold;">FAHAD MART</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="nav-bar-third">
-                    <div class="search-container position-relative">
-                        <form class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="search-icon feather feather-search">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                            <input class="form-control search-input ps-5" type="search"
-                                   placeholder="Search anything..." aria-label="Search">
-                            <button class="btn btn-search ms-2" type="submit">Search</button>
-                        </form>
-                    </div>
-                    <!-- <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Search">
-                    </form> -->
-                </div>
-                <div class="nav-bar-fourth" style="letter-spacing: 2px;">
-                    <div class="collapse navbar-collapse" id="mynavbar">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="fruits.html"><i class="fa-regular fa-lemon"></i> Fruits</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-pepper-hot"></i> Vegetables</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="nav-bar-fifth" style="gap: 2px; letter-spacing: 15px;">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <nav class="navbar navbar-expand-lg position-fixed z-2">
+        <div class="container-fluid">
+                <a class="navbar-brand ps-5" href="index.html">FAHAD MART</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="sign.html"><i class="fa-regular fa-user"></i></a>
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a class="nav-link" href="fruits.html"><i class="fa-regular fa-lemon"></i> Fruits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="nav-link" href="fruits.html"><i class="fa-solid fa-pepper-hot"></i> Vegetables</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sign.html"><i class="fa-regular fa-user"></i> Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-heart"></i> Whishlist</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> My Cart</a>
                         </li>
                     </ul>
-                </div>
-            </div>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>                
+            
         </div>
     </nav>
 
     <div class="order-cart">
         <div class="container">
+            <div class="row">
+              <!-- First Column: Cart Section -->
+              <div class="col-12 col-md-6">
+                <div class="p-3 text-center">
+                  <div class="order-cart">
+                    <div class="container">
+                      <div class="row" style="padding-bottom: 2%;">
+                        <div class="d-flex" style="align-items: center; justify-content: space-between;">
+                          <h1>Cart</h1>
+                        </div>
+                      </div>
+          
+                      <!-- First Product Row -->
+                      <div class="row" style="padding-top: 2%;">
+                        <div class="order-mango-div" style="display: flex; align-items: center; gap: 30px;">
+                          <div class="mango-img">
+                            <img src="order-cart-img/Group 93.png" alt="Mango">
+                          </div>
+                          <div class="caption-mango" style="align-items: center;">
+                            <h4>Ripe Fresh Mangoes</h4>
+                            <span><span>$400</span> <span style="color: #b6d98d;">20% OFF</span></span>
+                          </div>
+          
+                          <div class="div-weight-check">
+                            <form class="counter-form">
+                              <div class="value-button" id="decrease" onclick="decreaseValue()">-</div>
+                              <input type="number" id="number" value="0" />
+                              <div class="value-button" id="increase" onclick="increaseValue()">+</div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <!-- Second Product Row -->
+                      <div class="row" style="padding-top: 2%;">
+                        <div class="order-mango-div" style="display: flex; align-items: center; gap: 30px;">
+                          <div class="mango-img">
+                            <img src="order-cart-img/Group 93.png" alt="Mango">
+                          </div>
+                          <div class="caption-mango" style="align-items: center;">
+                            <h4>Ripe Fresh Mangoes</h4>
+                            <span><span>$400</span> <span style="color: #b6d98d;">20% OFF</span></span>
+                          </div>
+          
+                          <div class="div-weight-check">
+                            <form class="counter-form">
+                              <div class="value-button" id="decrease" onclick="decreaseValue()">-</div>
+                              <input type="number" id="number" value="0" />
+                              <div class="value-button" id="increase" onclick="increaseValue()">+</div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Second Column: Payment Section -->
+              <div class="col-12 col-md-6">
+                <div class="p-3 text-center">
+                  <div class="payment-details" style="padding: 10px; padding-top: 7%; margin-left: 100px;">
+                    <div class="container">
+                      <div class="row" style="padding-bottom: 3%;">
+                        <div class="add-coupon" style="display: flex; align-items: center; padding-bottom: 3%; gap: 100px;">
+                          <div class="div-coupon" style="display: flex; gap: 5px;">
+                            <i><img src="order-cart-img/Vector.png" alt="Coupon"></i>
+                            <h4>Add Coupon</h4>
+                          </div>
+                          <div class="div-icon-arrow" style="font-size: 21px;">
+                            <i class="fa-solid fa-circle-right"></i>
+                          </div>
+                        </div>
+          
+                        <!-- Payment Details Section -->
+                        <div class="payment-details" style="padding: 10px; padding-right: 56%;">
+                            <h4>PAYMENT DETAILS</h4>
+                        </div>
+                        <div class="div-bag" style="display: flex; align-items: center; padding: 10px; gap: 178px; padding-left: 2%;">
+                          <h5>Bag Total</h5>
+                          <h5>#774</h5>
+                        </div>
+          
+                        <div class="discount-div-coupon" style="display: flex; align-items: center; padding: 10px; gap: 109px;">
+                          <div class="discount-div-charge">
+                            <h5 style="padding-right: 62px;">Discount</h5>
+                            <h6 style="color: pink;"><span><</span><span>COUPON</span><span>></span> applied</h6>
+                          </div>
+                          <h5 style="color: pink;">-$100.0</h5>
+                        </div>
+          
+                        <div class="packaging-div" style="display: flex; align-items: center; padding: 10px; gap: 170px;">
+                          <h5>Packaging</h5>
+                          <h5><del style="color: gray;">$</del><span style="color: #b6d98d;"> Free</span></h5>
+                        </div>
+          
+                        <div class="shipping-charges-div" style="display: flex; align-items: center; padding: 10px; gap: 7px;">
+                          <div class="shipping-charges">
+                            <h5 style="padding-right: 97px;">Shipping Charges</h5>
+                            <!-- <h6 style="color: gray;">Includes long distance fee for 16km</h6> -->
+                          </div>
+                          <h5>$50</h5>
+                        </div>
+
+                        <hr>
+          
+                        <div class="div-total" style="display: flex; align-items: center;padding: 10px; gap: 207px;">
+                          <h5>TOTAL</h5>
+                          <h5>$724</h5>
+                        </div>
+          
+                        <div class="button-div" style="padding: 10px; padding-right: 35%;">
+                          <a href="order.html" class="btn btn-lg btn-primary" style="background-color: #ffbe30; color: black; font-weight: bold;">Order</a>
+                        </div>
+          
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+        </div>
+    </div>
+    
+      
+
+    
+
+    <!-- <div class="order-cart"> -->
+        <!-- <div class="container">
             <div class="row" style="padding-bottom: 2%;">
                 <div class="d-flex" style="align-items: center; justify-content: space-between;">
                     <div class="">
@@ -137,10 +245,10 @@
                 </div>
 
             </div>
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
 
-    <div class="payment-details" style="padding: 10px;">
+    <!-- <div class="payment-details" style="padding: 10px;">
         <div class="container">
             <div class="row" style="padding-bottom: 3%;">
                 <div class="add-coupon" style="display: flex; align-items: center; padding-bottom: 3%; gap: 100px;">
@@ -202,7 +310,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="footer">
         <div class="container">

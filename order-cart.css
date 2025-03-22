@@ -8,40 +8,71 @@
 
 
 
-.nav-bar {
-    background-color: #173334;
-    width: 100%;
-    padding: 0;
-    justify-items:center;
-}
-
-
+/* Force navbar background color */
 .navbar {
-    background-color: transparent !important;
+    background-color: #173334 !important;
+    padding: 0;
+    width: 100%;
 }
 
+/* Force the container inside navbar to match the navbar's background */
+.navbar .container-fluid,
+.navbar .container {
+    background-color: #173334 !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar link styling */
 .navbar .nav-link {
     color: #fff !important;
 }
 
+/* Active and hover effects */
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
-    color: #00c896 !important; 
+    color: #00c896 !important;
 }
 
-
+/* Navbar brand styling */
 .navbar-brand {
     color: #ffbe30 !important;
     font-weight: bold;
 }
 
-
+/* Toggler button and icon styling */
 .navbar-toggler {
     border-color: #ffffff !important;
 }
 
 .navbar-toggler-icon {
     filter: invert(1);
+}
+
+/* Collapsed navbar dropdown background color */
+.navbar-collapse {
+    background-color: #fff !important;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Ensure links inside collapsed navbar are readable */
+.navbar-collapse .nav-link {
+    color: #173334 !important;
+}
+
+/* Smooth collapse animation */
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse{
+    background-color: #173334 !important;
+}
+
+.nav-item .nav-link{
+    color: #fff !important;
 }
 
 
